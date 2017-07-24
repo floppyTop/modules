@@ -1,0 +1,25 @@
+header {
+  background: #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  ul {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+
+$break-small: 576px;
+$break-md: 768px;
+$break-dt: 1024px;
+$break-lt: 1280px;
+$break-md: 1400px;
+$break-lg: 1600px;
+
+@media screen and (min-width: $break-small) {
+  header {
+    padding: 1rem 3rem;
+  }
+}

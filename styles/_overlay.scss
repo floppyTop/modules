@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700');
+$blue: lighten(dodgerblue, 15%);
+$break-small: 576px;
+$break-md: 768px;
+$break-dt: 1024px;
+$break-lt: 1280px;
+$break-dt-md: 1400px;
+$break-lg: 1600px;
+$ret-ratio: 1.2;
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  a {
+    color: #212121;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: $blue;
+    display: none;
+    display: flex;
+    transition: .2s ease all;
+    &.opac {
+      opacity: 1;
+      overflow: hidden;
+      transition: .2s ease all;
+    }
+    ul {
+      color: #fff;
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0 1em;
+      border-left: 1px solid #e6e6e6;
+      position: relative;
+      top: 25%;
+      font-family: 'Fira Mono';
+      font-size: 2em;
+      font-weight: 500;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .navtrigger {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      z-index: 2;
+      position: relative;
+      left: 2.5em;
+      cursor: pointer;
+    }
+    .navtoggle {
+      z-index: 1;
+      width: 30px;
+      height: 5px;
+      margin-top: 1.25em;
+      background: #212121;
+      opacity: 1;
+      transition: .06s ease all;
+      &:before {
+        display: block;
+        content: "";
+        width: 30px;
+        height: 5px;
+        background: #212121;
+        position: relative;
+        top: -.55em;
+        transition: .125s ease-out;
+      }
+      &:after {
+        display: block;
+        content: "";
+        width: 30px;
+        height: 5px;
+        background: #212121;
+        position: relative;
+        top: .25em;
+        transition: .125s ease-out;
+      }
+      &.rotated {
+        background: transparent;
+        &:before {
+          transform: rotate(-45deg);
+          top: 0;
+          opacity: 1;
+          background: #fff;
+        }
+        &:after {
+          transform: rotate(45deg);
+          top: -.29em;
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $break-small) {
+  body .menu ul {
+    font-size: 3.2em;
+    li {
+      margin-bottom: .1em;
+    }
+  }
+}
+
+@media screen and (min-width: $break-md) {
+  body .menu ul {
+    font-size: 4em;
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $break-dt) {
+  body .menu ul {
+    top: 15%;
+    margin: 0 2em;
+  }
+}
