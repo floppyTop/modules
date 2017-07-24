@@ -13,8 +13,8 @@ $(".navtrigger").click(function() {
     $(".menu").toggleClass("opac");
   } else if ($(".navtoggle").hasClass("rotated")) {
     $(".navtoggle").toggleClass("rotated");
-    $(".menu").toggleClass("opac").delay(200);
-    $(".menu").fadeOut(200, function(){
+    $(".menu").toggleClass("opac").delay(250);
+    $(".menu").fadeOut(0, function(){
       $(".menu").hide();
     });
     //$(".menu").toggleClass("opac").delay(300).hide();
