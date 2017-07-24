@@ -32,7 +32,6 @@ body {
     height: 100%;
     opacity: 0;
     background-color: $blue;
-    display: none;
     display: flex;
     transition: .2s ease all;
     &.opac {
@@ -52,7 +51,7 @@ body {
       font-family: 'Fira Mono';
       font-size: 2em;
       font-weight: 500;
-
+      height: 100vh;
       li {
         list-style-type: none;
       }
@@ -139,6 +138,6 @@ body {
 @media screen and (min-width: $break-dt) {
   body .menu ul {
     top: 15%;
-    margin: 0 2em;
+    margin: 0 1em;
   }
 }

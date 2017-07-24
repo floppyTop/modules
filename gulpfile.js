@@ -52,7 +52,7 @@ gulp.task('watch', function() {
   gulp.watch('scripts/hello.coffee', ['coffee']);
   gulp.watch('scripts/*.js', ['js']);
   gulp.watch('styles/*.scss', ['sass']);
-  gulp.watch('./views/index.pug', ['views']);
+  gulp.watch('views/**/*.pug', ['views']);
 });
 
 gulp.task('connect', function() {

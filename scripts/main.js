@@ -5,6 +5,7 @@ var menu = "<ul><li><a>About</a></li><li><a>Portfolio</a></li><li><a>Contact</a>
 
 $("body").append(menuContainer);
 $(".menu").append(menu);
+$('.menu').hide();
 
 $(".navtrigger").click(function() {
   if (! $(".navtoggle").hasClass("rotated")) {

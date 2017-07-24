@@ -1,3 +1,10 @@
+$break-small: 576px;
+$break-md: 768px;
+$break-dt: 1024px;
+$break-lt: 1280px;
+$break-md-dt: 1400px;
+$break-lg: 1600px;
+
 header {
   background: #e6e6e6;
   display: flex;
@@ -11,15 +18,14 @@ header {
   }
 }
 
-$break-small: 576px;
-$break-md: 768px;
-$break-dt: 1024px;
-$break-lt: 1280px;
-$break-md: 1400px;
-$break-lg: 1600px;
-
 @media screen and (min-width: $break-small) {
   header {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (min-width: $break-md) {
+  header {
+    padding: 1rem 5.5rem;
   }
 }
