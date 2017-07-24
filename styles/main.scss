@@ -3,10 +3,18 @@
 @import 'banner';
 @import '3calls';
 
-//Fonts
-
-
 //Colors
+$primary-cta: #a8a8a8;
+
+//Fonts
+.btn-primary {
+  background: $primary-cta;
+  border-color: darken($primary-cta, 10%);
+  &:hover {
+    background: darken($primary-cta, 30%);
+  }
+}
+
 
 
 //Base Type Styles

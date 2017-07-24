@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700');
-$blue: lighten(dodgerblue, 15%);
+$blue: lighten(#474747, 15%);
 $break-small: 576px;
 $break-md: 768px;
 $break-dt: 1024px;
@@ -45,7 +45,7 @@ body {
       display: inline-block;
       margin: 0 auto;
       padding: 0 1em;
-      border-left: 1px solid #e6e6e6;
+      border-left: 1px solid #a8a8a8;
       position: relative;
       top: 25%;
       font-family: 'Fira Mono';
