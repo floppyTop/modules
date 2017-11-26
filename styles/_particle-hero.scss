@@ -1,0 +1,55 @@
+.jumbotron {
+  height: 300px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  .banner-content {
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 8.8em;
+    padding-left: 2em;
+    left: 0;
+    z-index: 3;
+    display: inline;
+    height: 0;
+
+    .lead {
+      color: #fff;
+      font-size: 2.3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      z-index: 1;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  canvas {
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+    background-image: linear-gradient(to bottom right, firebrick, darken(firebrick, 10%));
+  }
+}
+
+@media screen and (min-width: $break-small) {
+  .jumbotron .banner-content h1.lead {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: $break-md) {
+  body .jumbotron .banner-content h1.lead {
+    font-size: 3.5rem;
+  }
+  .jumbotron { 
+    .btn {
+      font-size: 1.6rem;
+    }
+
+  .banner-content {
+    padding-left: 5em;
+  }
+}
+}

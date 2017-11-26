@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "compass": "^0.1.1",
-    "gulp": "latest",
+    "gulp": "^3.9.1",
     "gulp-coffee": "latest",
     "gulp-concat": "latest",
     "gulp-connect": "latest",
@@ -12,5 +12,8 @@
     "gulp-util": "latest",
     "gulp-webserver": "^0.9.1",
     "pug": "^2.0.0-rc.1"
+  },
+  "dependencies": {
+    "particles.js": "^2.0.0"
   }
 }

@@ -39,6 +39,7 @@ body .menu {
   opacity: 0;
   background-color: #6d6d6d;
   display: flex;
+  z-index: 100;
   transition: .2s ease all; }
   body .menu.opac {
     opacity: 1;
@@ -68,12 +69,12 @@ body .header {
     display: inline-block;
     height: 50px;
     width: 50px;
-    z-index: 2;
+    z-index: 102;
     position: relative;
     left: 2.5em;
     cursor: pointer; }
   body .header .navtoggle {
-    z-index: 1;
+    z-index: 101;
     width: 30px;
     height: 5px;
     margin-top: 1.25em;
@@ -99,7 +100,8 @@ body .header {
       top: .25em;
       transition: .125s ease-out; }
     body .header .navtoggle.rotated {
-      background: transparent; }
+      background: transparent;
+      z-index: 101; }
       body .header .navtoggle.rotated:before {
         transform: rotate(-45deg);
         top: 0;
@@ -129,16 +131,32 @@ body .header {
 
 .jumbotron {
   height: 300px;
-  padding: 2rem 2rem;
+  padding: 0;
   display: flex;
   align-items: center;
   border-radius: 0; }
   .jumbotron .banner-content {
     padding-bottom: 2rem;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    position: absolute;
+    top: 8.8em;
+    padding-left: 2em;
+    left: 0;
+    z-index: 3;
+    display: inline;
+    height: 0; }
     .jumbotron .banner-content .lead {
-      font-size: 1.5rem;
-      margin-bottom: 2rem; }
+      color: #fff;
+      font-size: 2.3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      z-index: 1;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+  .jumbotron canvas {
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+    background-image: linear-gradient(to bottom right, firebrick, #871a1a); }
 
 @media screen and (min-width: 576px) {
   .jumbotron .banner-content h1.lead {
@@ -148,7 +166,9 @@ body .header {
   body .jumbotron .banner-content h1.lead {
     font-size: 3.5rem; }
   .jumbotron .btn {
-    font-size: 1.6rem; } }
+    font-size: 1.6rem; }
+  .jumbotron .banner-content {
+    padding-left: 5em; } }
 
 .call {
   margin: .5em 0; }
@@ -157,7 +177,7 @@ body .header {
   .call .icon {
     width: 140px;
     height: 140px;
-    background: #e8e8e8;
+    background: #eee;
     border-radius: 50%;
     shape-outside: circle();
     float: left;

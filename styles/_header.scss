@@ -1,9 +1,4 @@
-$break-small: 576px;
-$break-md: 768px;
-$break-dt: 1024px;
-$break-lt: 1280px;
-$break-md-dt: 1400px;
-$break-lg: 1600px;
+@import 'common';
 
 header {
   background: #e6e6e6;
