@@ -131,32 +131,16 @@ body .header {
 
 .jumbotron {
   height: 300px;
-  padding: 0;
+  padding: 2rem 2rem;
   display: flex;
   align-items: center;
   border-radius: 0; }
   .jumbotron .banner-content {
     padding-bottom: 2rem;
-    box-sizing: border-box;
-    position: absolute;
-    top: 8.8em;
-    padding-left: 2em;
-    left: 0;
-    z-index: 3;
-    display: inline;
-    height: 0; }
+    box-sizing: border-box; }
     .jumbotron .banner-content .lead {
-      color: #fff;
-      font-size: 2.3rem;
-      font-weight: 400;
-      margin-bottom: 2rem;
-      z-index: 1;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
-  .jumbotron canvas {
-    width: 100%;
-    height: 300px;
-    z-index: 2;
-    background-image: linear-gradient(to bottom right, firebrick, #871a1a); }
+      font-size: 1.5rem;
+      margin-bottom: 2rem; }
 
 @media screen and (min-width: 576px) {
   .jumbotron .banner-content h1.lead {
@@ -166,9 +150,7 @@ body .header {
   body .jumbotron .banner-content h1.lead {
     font-size: 3.5rem; }
   .jumbotron .btn {
-    font-size: 1.6rem; }
-  .jumbotron .banner-content {
-    padding-left: 5em; } }
+    font-size: 1.6rem; } }
 
 .call {
   margin: .5em 0; }
